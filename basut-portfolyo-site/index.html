@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Servet Erdoğan · Basut Okulları Batman başvuru portföyü</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Renkler Basut logosundan alındı; kampanya, afiş ve web aynı sistemi kullanıyor */
+:root{--lacivert:#11104B;--turuncu:#D3702A;--kirmizi:#D63124;--altin:#E0A236;--krem:#FDF5C3;--zemin:#FBF9F2;--zemin-2:#F3EFE2;--cizgi:#E2DDCC;--metin-2:#4A4960;--turuncu-koyu:#A8561C;--kenar:clamp(20px,5.5vw,80px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--zemin);color:var(--lacivert);font-family:Inter,"Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3{margin:0;font-family:Sora,Inter,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.08}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--turuncu);outline-offset:3px}
+.kap{padding-inline:var(--kenar);max-width:1440px;margin-inline:auto}
+.soluk{color:var(--metin-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:4px;border:1.5px solid var(--lacivert);font-weight:600;text-decoration:none;font-size:16px}
+.btn-dolu{background:var(--lacivert);color:#fff}
+.btn-dolu:hover{background:#23226b}
+.btn:not(.btn-dolu):hover{background:rgba(17,16,75,.06)}
+
+/* Üst kısım */
+.ust{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:24px;flex-wrap:wrap}
+.ust strong{font-size:18px}
+.ust .iletisim{display:flex;gap:10px;flex-wrap:wrap}
+.giris{padding-block:clamp(40px,8vw,112px) clamp(40px,6vw,80px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:end}
+.giris h1{font-size:clamp(40px,6vw,84px);line-height:1.02}
+.giris p{font-size:clamp(17px,1.5vw,20px);max-width:34em;margin-top:24px}
+.icindekiler{list-style:none;margin:0;padding:0;border-top:1px solid var(--cizgi)}
+.icindekiler li{border-bottom:1px solid var(--cizgi)}
+.icindekiler a{display:grid;grid-template-columns:40px 1fr auto;align-items:center;gap:16px;padding:18px 0;text-decoration:none}
+.icindekiler .renk{height:6px;width:40px}
+.icindekiler .ilan{font-size:14px;color:var(--metin-2);text-align:right}
+.icindekiler a:hover strong{text-decoration:underline}
+
+/* Tespitler */
+.tespit{background:var(--lacivert);color:#fff;padding-block:clamp(48px,7vw,96px)}
+.tespit .kap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(32px,6vw,96px)}
+.tespit h2{font-size:clamp(28px,3.2vw,44px)}
+.tespit .kaynak{color:var(--krem);font-size:15px;margin-top:16px}
+.tespit ol{margin:0;padding:0;list-style:none;counter-reset:t}
+.tespit li{counter-increment:t;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:16px 0;border-top:1px solid rgba(253,245,195,.2);font-size:18px}
+.tespit li::before{content:counter(t,decimal-leading-zero);color:var(--krem);font-weight:600}
+
+/* Çalışma bölümleri */
+.calisma{padding-block:clamp(56px,8vw,112px);border-bottom:1px solid var(--cizgi)}
+.calisma-bas{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(24px,5vw,80px);margin-bottom:48px;align-items:start}
+.calisma-bas .serit{height:6px;width:56px;margin-bottom:20px}
+.calisma-bas h2{font-size:clamp(32px,4vw,56px)}
+.calisma-bas .ilan{margin-top:12px;font-weight:600;color:var(--turuncu-koyu)}
+.calisma-bas ul{margin:16px 0 0;padding-left:20px;color:var(--metin-2)}
+.calisma-bas li{margin-bottom:6px}
+.alt-baslik{font-weight:600;margin:40px 0 16px}
+
+/* Tasarımları gerçek boyutlarında çizip kutuya sığacak kadar küçülten kapsayıcı */
+.olcek{position:relative;overflow:hidden;background:#fff;border:1px solid var(--cizgi)}
+.olcek>.ic{position:absolute;top:0;left:0;transform-origin:0 0}
+.olcek iframe{border:0;display:block;pointer-events:none}
+.izgara-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,32px)}
+.storyler{max-width:760px}
+.afis-duzen{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:end}
+.web-duzen{display:grid;grid-template-columns:minmax(0,3.6fr) minmax(0,1fr);gap:clamp(16px,3vw,48px);align-items:end}
+.tarayici{border:1px solid var(--cizgi);border-radius:6px;overflow:hidden;background:#fff}
+.tarayici .adres{height:32px;display:flex;align-items:center;padding:0 14px;background:var(--zemin-2);border-bottom:1px solid var(--cizgi);font-size:13px;color:var(--metin-2)}
+.tarayici .olcek{border:0}
+.telefon{padding:8px;background:var(--lacivert);border-radius:26px}
+.telefon .olcek{border:0;border-radius:18px}
+.web-butonlar{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.not{margin-top:20px;font-size:15px;color:var(--metin-2);max-width:48em}
+
+footer{padding-block:clamp(48px,7vw,96px)}
+footer .kap{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:end}
+footer h2{font-size:clamp(28px,3.2vw,44px);margin-bottom:12px}
+.uyari{margin-top:40px;padding-top:20px;border-top:1px solid var(--cizgi);font-size:14px;color:var(--metin-2)}
+
+@media (max-width: 860px){
+  .giris,.tespit .kap,.calisma-bas,.afis-duzen,.web-duzen{grid-template-columns:1fr}
+  .izgara-3.feedler{grid-template-columns:1fr 1fr}
+  .telefon{max-width:280px}
+}
+@media (max-width: 520px){ .izgara-3.feedler{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<header class="kap ust">
+  <strong>Servet Erdoğan</strong>
+  <!-- İletişim bilgilerinizi buraya yazın: tel: ve mailto: bağlantılarını değiştirin -->
+  <div class="iletisim">
+    <a class="btn" href="tel:+905352736272">0535 273 62 72</a>
+    <a class="btn btn-dolu" href="mailto:eservet224@gmail.com">E-posta gönder</a>
+  </div>
+</header>
+
+<main>
+  <section class="kap giris" aria-labelledby="giris-baslik">
+    <div>
+      <h1 id="giris-baslik">Basut Okulları Batman için reklam, afiş ve web çalışmaları</h1>
+      <p class="soluk">Bilgisayar Mühendisiyim. İlandaki üç iş kalemi için önce okulun mevcut web sitesini ve sosyal medya iletişimini inceledim; ardından tespit ettiğim ihtiyaçlara cevap veren, aynı görsel sistemi paylaşan üç çalışma hazırladım.</p>
+    </div>
+    <ul class="icindekiler">
+      <li><a href="#kampanya"><span class="renk" style="background:var(--kirmizi)"></span><strong>Instagram kampanyası</strong><span class="ilan">Reklam çalışmaları</span></a></li>
+      <li><a href="#afis"><span class="renk" style="background:var(--turuncu)"></span><strong>Etkinlik afişi</strong><span class="ilan">Afiş işleri</span></a></li>
+      <li><a href="#web"><span class="renk" style="background:var(--altin)"></span><strong>Ana sayfa yeniden tasarımı</strong><span class="ilan">Web tasarımı</span></a></li>
+    </ul>
+  </section>
+
+  <section class="tespit" aria-labelledby="tespit-baslik">
+    <div class="kap">
+      <div>
+        <h2 id="tespit-baslik">Başlangıç noktası: mevcut iletişimde tespit ettiklerim</h2>
+        <p class="kaynak">Kaynak: batman.basutokullari.k12.tr ve @batmanbasutkoleji profili, Eylül 2026.</p>
+      </div>
+      <ol>
+        <li>Web sitesinin menüsünde 2026'da hâlâ ayrı bir “Pandemi” başlığı yer alıyor.</li>
+        <li>Alan sayfaları yalnızca broşür görsellerinden oluşuyor; Gıda alanının kendi sayfası yok.</li>
+        <li>Sitedeki sosyal medya ikonları okulun hesaplarına değil, platformların ana sayfalarına gidiyor.</li>
+        <li>Batman sitesinde Mersin şubesine ait bir cümle ve adres bulunuyor.</li>
+        <li>Web haber akışındaki son 19 haberin yalnızca 2'si doğrudan meslek alanlarıyla ilgili.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="kap calisma" id="kampanya" aria-labelledby="kampanya-baslik">
+    <div class="calisma-bas">
+      <div><div class="serit" style="background:var(--kirmizi)"></div><h2 id="kampanya-baslik">Mesleğin ellerinde başlar.</h2><p class="ilan">Instagram kampanyası · Reklam çalışmaları</p></div>
+      <div>
+        <p class="soluk">Meslek lisesinin farkı yaparak öğrenmektir; bunu en iyi, mesleğin aletini tutan eller anlatır. Tek bir başlık kalıbı (“Her ___ bir elle başlar.”) ve tek şablon, üç alanın renk koduyla ayrışır.</p>
+        <ul>
+          <li>Renkler okulun logosundan örneklendi; altın tonu Gıda alanı için türetildi.</li>
+          <li>Metinlerde doğrulanmamış hiçbir okul iddiası kullanılmadı.</li>
+          <li>Story'lerde yazılar, Instagram arayüzünün kapattığı üst ve alt alanların dışında.</li>
+          <li>Gerçek uygulamada fotoğraflar okulun laboratuvarında 30 dakikalık bir çekimle yenilenir.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="izgara-3 feedler">
+      <div class="olcek" data-w="1080" data-h="1350"><div class="ic"><div style="width: 1080px; height: 1350px; display: flex; flex-direction: column; overflow: hidden; background: #FBF9F2; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">
+
+<img src="assets/foto-saglik.jpg" alt="Eğitim mankeninin koluna tansiyon ölçen eller (temsili görsel)" style="width: 1080px; height: 836px; flex-shrink: 0; display: block; object-fit: cover; object-position: 50% 50%;">
+
+<div style="height: 8px; flex-shrink: 0; background: #D63124;"></div>
+<div style="height: 366px; flex-shrink: 0; background: #11104B; box-sizing: border-box; padding: 44px 64px 40px 64px; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<div style="font-size: 24px; line-height: 32px; font-weight: 600; color: #FDF5C3;">Mesleğin ellerinde başlar.</div>
+<div style="padding: 6px 16px; background: #D63124; border-radius: 4px; font-size: 20px; line-height: 28px; font-weight: 600; color: #FFFFFF;">Sağlık</div>
+</div>
+<h1 style="margin: 0; font-family: Sora, Inter, 'Helvetica Neue', Arial, sans-serif; font-size: 76px; line-height: 1.05; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF;">Her <span style="color: #FF8B7E;">bakım</span><br>bir elle başlar.</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.3; font-weight: 400; color: #FFFFFF;">Sağlık alanında teoriyi uygulamayla öğrenirsin.</p>
+</div>
+
+<div style="height: 140px; flex-shrink: 0; background: #FBF9F2; box-sizing: border-box; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<div style="padding: 12px 22px; background: #11104B; border-radius: 4px; font-size: 26px; line-height: 32px; font-weight: 600; color: #FFFFFF;">Bilgi için: 0488 213 98 61</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><img src="assets/basut-logo.png" alt="Özel Basut Okulları Batman logosu" style="height: 64px; width: auto; display: block;"><div style="font-size: 19px; line-height: 24px; font-weight: 600; color: #11104B;">Mesleki ve Teknik Anadolu Lisesi</div></div>
+</div>
+
+</div></div></div>
+      <div class="olcek" data-w="1080" data-h="1350"><div class="ic"><div style="width: 1080px; height: 1350px; display: flex; flex-direction: column; overflow: hidden; background: #FBF9F2; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">
+
+<img src="assets/foto-elektrik.jpg" alt="Breadboard üzerinde LED devresi kuran eller (temsili görsel)" style="width: 1080px; height: 836px; flex-shrink: 0; display: block; object-fit: cover; object-position: 50% 50%;">
+
+<div style="height: 8px; flex-shrink: 0; background: #D3702A;"></div>
+<div style="height: 366px; flex-shrink: 0; background: #11104B; box-sizing: border-box; padding: 44px 64px 40px 64px; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<div style="font-size: 24px; line-height: 32px; font-weight: 600; color: #FDF5C3;">Mesleğin ellerinde başlar.</div>
+<div style="padding: 6px 16px; background: #D3702A; border-radius: 4px; font-size: 20px; line-height: 28px; font-weight: 600; color: #11104B;">Elektrik-Elektronik</div>
+</div>
+<h1 style="margin: 0; font-family: Sora, Inter, 'Helvetica Neue', Arial, sans-serif; font-size: 76px; line-height: 1.05; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF;">Her <span style="color: #F4A263;">devre</span><br>bir elle başlar.</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.3; font-weight: 400; color: #FFFFFF;">Elektrik-Elektronik alanında teoriyi uygulamayla öğrenirsin.</p>
+</div>
+
+<div style="height: 140px; flex-shrink: 0; background: #FBF9F2; box-sizing: border-box; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<div style="padding: 12px 22px; background: #11104B; border-radius: 4px; font-size: 26px; line-height: 32px; font-weight: 600; color: #FFFFFF;">Bilgi için: 0488 213 98 61</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><img src="assets/basut-logo.png" alt="Özel Basut Okulları Batman logosu" style="height: 64px; width: auto; display: block;"><div style="font-size: 19px; line-height: 24px; font-weight: 600; color: #11104B;">Mesleki ve Teknik Anadolu Lisesi</div></div>
+</div>
+
+</div></div></div>
+      <div class="olcek" data-w="1080" data-h="1350"><div class="ic"><div style="width: 1080px; height: 1350px; display: flex; flex-direction: column; overflow: hidden; background: #FBF9F2; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">
+
+<img src="assets/foto-gida.jpg" alt="Laboratuvarda pipetle numune tüpüne sıvı aktaran eller (temsili görsel)" style="width: 1080px; height: 836px; flex-shrink: 0; display: block; object-fit: cover; object-position: 50% 50%;">
+
+<div style="height: 8px; flex-shrink: 0; background: #E0A236;"></div>
+<div style="height: 366px; flex-shrink: 0; background: #11104B; box-sizing: border-box; padding: 44px 64px 40px 64px; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<div style="font-size: 24px; line-height: 32px; font-weight: 600; color: #FDF5C3;">Mesleğin ellerinde başlar.</div>
+<div style="padding: 6px 16px; background: #E0A236; border-radius: 4px; font-size: 20px; line-height: 28px; font-weight: 600; color: #11104B;">Gıda</div>
+</div>
+<h1 style="margin: 0; font-family: Sora, Inter, 'Helvetica Neue', Arial, sans-serif; font-size: 76px; line-height: 1.05; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF;">Her <span style="color: #F2C766;">üretim</span><br>bir elle başlar.</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.3; font-weight: 400; color: #FFFFFF;">Gıda alanında üretimi ve kaliteyi uygulayarak öğrenirsin.</p>
+</div>
+
+<div style="height: 140px; flex-shrink: 0; background: #FBF9F2; box-sizing: border-box; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<div style="padding: 12px 22px; background: #11104B; border-radius: 4px; font-size: 26px; line-height: 32px; font-weight: 600; color: #FFFFFF;">Bilgi için: 0488 213 98 61</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><img src="assets/basut-logo.png" alt="Özel Basut Okulları Batman logosu" style="height: 64px; width: auto; display: block;"><div style="font-size: 19px; line-height: 24px; font-weight: 600; color: #11104B;">Mesleki ve Teknik Anadolu Lisesi</div></div>
+</div>
+
+</div></div></div>
+    </div>
+    <p class="alt-baslik">Story uyarlamaları</p>
+    <div class="izgara-3 storyler">
+      <div class="olcek" data-w="1080" data-h="1920"><div class="ic"><div style="width: 1080px; height: 1920px; display: flex; flex-direction: column; overflow: hidden; background: #FBF9F2; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">
+
+<img src="assets/story-saglik.jpg" alt="Eğitim mankeninin koluna tansiyon ölçen eller (temsili görsel)" style="width: 1080px; height: 960px; flex-shrink: 0; display: block; object-fit: cover; object-position: 50% 50%;">
+
+<div style="height: 8px; flex-shrink: 0; background: #D63124;"></div>
+<div style="flex-grow: 1; background: #11104B; box-sizing: border-box; padding: 56px 64px 0 64px; display: flex; flex-direction: column; align-items: flex-start; gap: 28px;">
+<div style="align-self: stretch; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<div style="font-size: 26px; line-height: 32px; font-weight: 600; color: #FDF5C3;">Mesleğin ellerinde başlar.</div>
+<div style="padding: 6px 16px; background: #D63124; border-radius: 4px; font-size: 22px; line-height: 28px; font-weight: 600; color: #FFFFFF;">Sağlık</div>
+</div>
+<h1 style="margin: 0; font-family: Sora, Inter, 'Helvetica Neue', Arial, sans-serif; font-size: 88px; line-height: 1.05; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF;">Her <span style="color: #FF8B7E;">bakım</span><br>bir elle başlar.</h1>
+<div style="margin-top: 12px; padding: 26px 40px; background: #FBF9F2; border-radius: 4px; font-size: 34px; line-height: 40px; font-weight: 600; color: #11104B;">Detaylı bilgi için bize ulaşın.</div>
+<div style="margin-top: 36px; display: flex; align-items: center; gap: 24px;">
+<div style="padding: 12px 18px; background: #FBF9F2; border-radius: 4px;"><img src="assets/basut-logo.png" alt="Özel Basut Okulları Batman logosu" style="height: 64px; width: auto; display: block;"></div>
+<div style="font-size: 24px; line-height: 32px; font-weight: 500; color: #FDF5C3;">Mesleki ve Teknik Anadolu Lisesi · Batman</div>
+</div>
+</div>
+
+</div></div></div>
+      <div class="olcek" data-w="1080" data-h="1920"><div class="ic"><div style="width: 1080px; height: 1920px; display: flex; flex-direction: column; overflow: hidden; background: #FBF9F2; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">
+
+<img src="assets/story-elektrik.jpg" alt="Breadboard üzerinde LED devresi kuran eller (temsili görsel)" style="width: 1080px; height: 960px; flex-shrink: 0; display: block; object-fit: cover; object-position: 50% 50%;">
+
+<div style="height: 8px; flex-shrink: 0; background: #D3702A;"></div>
+<div style="flex-grow: 1; background: #11104B; box-sizing: border-box; padding: 56px 64px 0 64px; display: flex; flex-direction: column; align-items: flex-start; gap: 28px;">
+<div style="align-self: stretch; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<div style="font-size: 26px; line-height: 32px; font-weight: 600; color: #FDF5C3;">Mesleğin ellerinde başlar.</div>
+<div style="padding: 6px 16px; background: #D3702A; border-radius: 4px; font-size: 22px; line-height: 28px; font-weight: 600; color: #11104B;">Elektrik-Elektronik</div>
+</div>
+<h1 style="margin: 0; font-family: Sora, Inter, 'Helvetica Neue', Arial, sans-serif; font-size: 88px; line-height: 1.05; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF;">Her <span style="color: #F4A263;">devre</span><br>bir elle başlar.</h1>
+<div style="margin-top: 12px; padding: 26px 40px; background: #FBF9F2; border-radius: 4px; font-size: 34px; line-height: 40px; font-weight: 600; color: #11104B;">Detaylı bilgi için bize ulaşın.</div>
+<div style="margin-top: 36px; display: flex; align-items: center; gap: 24px;">
+<div style="padding: 12px 18px; background: #FBF9F2; border-radius: 4px;"><img src="assets/basut-logo.png" alt="Özel Basut Okulları Batman logosu" style="height: 64px; width: auto; display: block;"></div>
+<div style="font-size: 24px; line-height: 32px; font-weight: 500; color: #FDF5C3;">Mesleki ve Teknik Anadolu Lisesi · Batman</div>
+</div>
+</div>
+
+</div></div></div>
+      <div class="olcek" data-w="1080" data-h="1920"><div class="ic"><div style="width: 1080px; height: 1920px; display: flex; flex-direction: column; overflow: hidden; background: #FBF9F2; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">
+
+<img src="assets/story-gida.jpg" alt="Laboratuvarda pipetle numune tüpüne sıvı aktaran eller (temsili görsel)" style="width: 1080px; height: 960px; flex-shrink: 0; display: block; object-fit: cover; object-position: 50% 50%;">
+
+<div style="height: 8px; flex-shrink: 0; background: #E0A236;"></div>
+<div style="flex-grow: 1; background: #11104B; box-sizing: border-box; padding: 56px 64px 0 64px; display: flex; flex-direction: column; align-items: flex-start; gap: 28px;">
+<div style="align-self: stretch; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<div style="font-size: 26px; line-height: 32px; font-weight: 600; color: #FDF5C3;">Mesleğin ellerinde başlar.</div>
+<div style="padding: 6px 16px; background: #E0A236; border-radius: 4px; font-size: 22px; line-height: 28px; font-weight: 600; color: #11104B;">Gıda</div>
+</div>
+<h1 style="margin: 0; font-family: Sora, Inter, 'Helvetica Neue', Arial, sans-serif; font-size: 88px; line-height: 1.05; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF;">Her <span style="color: #F2C766;">üretim</span><br>bir elle başlar.</h1>
+<div style="margin-top: 12px; padding: 26px 40px; background: #FBF9F2; border-radius: 4px; font-size: 34px; line-height: 40px; font-weight: 600; color: #11104B;">Detaylı bilgi için bize ulaşın.</div>
+<div style="margin-top: 36px; display: flex; align-items: center; gap: 24px;">
+<div style="padding: 12px 18px; background: #FBF9F2; border-radius: 4px;"><img src="assets/basut-logo.png" alt="Özel Basut Okulları Batman logosu" style="height: 64px; width: auto; display: block;"></div>
+<div style="font-size: 24px; line-height: 32px; font-weight: 500; color: #FDF5C3;">Mesleki ve Teknik Anadolu Lisesi · Batman</div>
+</div>
+</div>
+
+</div></div></div>
+    </div>
+  </section>
+
+  <section class="kap calisma" id="afis" aria-labelledby="afis-baslik">
+    <div class="afis-duzen">
+      <div class="olcek" data-w="1123" data-h="1587"><div class="ic"><div style="width: 1123px; height: 1587px; display: flex; flex-direction: column; overflow: hidden; background: #FBF9F2; color: #11104B; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">
+
+<div style="flex-shrink: 0; box-sizing: border-box; padding: 64px 64px 0 64px; display: flex; flex-direction: column;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 80px;">
+<img src="assets/basut-logo.png" alt="Özel Basut Okulları Batman logosu" style="height: 80px; width: auto; display: block;">
+<div style="font-size: 20px; line-height: 28px; font-weight: 600; color: #11104B;">Mesleğin ellerinde başlar.</div>
+</div>
+<div style="margin-top: 72px; font-size: 26px; line-height: 32px; font-weight: 600; color: #A8561C;">Davetlisiniz</div>
+<h1 style="margin: 12px 0 0 0; font-family: Sora, Inter, 'Helvetica Neue', Arial, sans-serif; font-size: 150px; line-height: 0.98; font-weight: 800; letter-spacing: -0.03em; color: #11104B;">Bilim<br>Teknik<br>Fuarı</h1>
+<p style="margin: 32px 0 0 0; max-width: 720px; font-size: 36px; line-height: 1.3; font-weight: 400; color: #11104B;">Öğrencilerimizin projelerini yerinde görün.</p>
+</div>
+
+<div style="flex-shrink: 0; box-sizing: border-box; padding: 48px 64px 0 64px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+<div style="height: 300px; box-sizing: border-box; padding: 32px 28px; background: #D63124; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between;">
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 8.6a4.6 4.6 0 0 0-8.8-1.9A4.6 4.6 0 0 0 3.2 8.6c0 5 8.8 10.4 8.8 10.4s8.8-5.4 8.8-10.4z"></path><path d="M5 12h3l1.5-2.5 3 5 1.5-2.5h5"></path></svg>
+<div style="font-size: 32px; line-height: 1.15; font-weight: 600; color: #FFFFFF;">Sağlık<br>alanı</div>
+</div>
+<div style="height: 300px; box-sizing: border-box; padding: 32px 28px; background: #D3702A; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between;">
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#11104B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg>
+<div style="font-size: 32px; line-height: 1.15; font-weight: 600; color: #11104B;">Elektrik-<br>Elektronik</div>
+</div>
+<div style="height: 300px; box-sizing: border-box; padding: 32px 28px; background: #E0A236; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between;">
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#11104B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V8"></path><path d="M12 8C10 7.2 9 5.5 9 3.5c1.8 0 3 1.3 3 3.3 0-2 1.2-3.3 3-3.3 0 2-1 3.7-3 4.5z"></path><path d="M12 13.5c-2-.5-3.6-2-3.6-4 1.9 0 3.6 1.3 3.6 3.4 0-2.1 1.7-3.4 3.6-3.4 0 2-1.6 3.5-3.6 4z"></path><path d="M12 19c-2-.5-3.6-2-3.6-4 1.9 0 3.6 1.3 3.6 3.4 0-2.1 1.7-3.4 3.6-3.4 0 2-1.6 3.5-3.6 4z"></path></svg>
+<div style="font-size: 32px; line-height: 1.15; font-weight: 600; color: #11104B;">Gıda<br>alanı</div>
+</div>
+</div>
+
+<div style="margin-top: 48px; flex-grow: 1; background: #11104B; box-sizing: border-box; padding: 44px 64px 48px 64px; display: flex; align-items: flex-start; justify-content: space-between; gap: 40px;">
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 24px;">
+<div style="font-size: 28px; line-height: 36px; font-weight: 600; color: #FDF5C3;">Ortaokul öğrencileri ve veliler davetlidir.</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; row-gap: 20px;">
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<div style="font-size: 18px; line-height: 24px; font-weight: 600; color: #FDF5C3;">Tarih</div>
+<div style="font-size: 28px; line-height: 34px; font-weight: 600; color: #FFFFFF;">[Gün Ay 2027]</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<div style="font-size: 18px; line-height: 24px; font-weight: 600; color: #FDF5C3;">Saat</div>
+<div style="font-size: 28px; line-height: 34px; font-weight: 600; color: #FFFFFF;">[00.00 – 00.00]</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<div style="font-size: 18px; line-height: 24px; font-weight: 600; color: #FDF5C3;">Yer</div>
+<div style="font-size: 22px; line-height: 29px; font-weight: 500; color: #FFFFFF;">Özel Basut Okulları, Kültür Mah. 2620 Sok. 206 Evler, Batman</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<div style="font-size: 18px; line-height: 24px; font-weight: 600; color: #FDF5C3;">Bilgi</div>
+<div style="font-size: 28px; line-height: 34px; font-weight: 600; color: #FFFFFF;">0488 213 98 61</div>
+</div>
+</div>
+</div>
+<div style="flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+<div style="width: 200px; height: 200px; box-sizing: border-box; background: #FFFFFF; border-radius: 4px; padding: 12px;">
+<div style="width: 100%; height: 100%; box-sizing: border-box; border: 2px dashed #11104B; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 18px; line-height: 24px; font-weight: 600; color: #11104B;">[QR kod]</div>
+</div>
+<div style="font-size: 18px; line-height: 24px; font-weight: 500; color: #FDF5C3;">Konum için okutun</div>
+</div>
+</div>
+
+</div></div></div>
+      <div>
+        <div class="serit" style="height:6px;width:56px;margin-bottom:20px;background:var(--turuncu)"></div>
+        <h2 id="afis-baslik" style="font-size:clamp(32px,4vw,56px)">Bilim Teknik Fuarı</h2>
+        <p class="ilan" style="margin-top:12px;font-weight:600;color:var(--turuncu-koyu)">A3 afiş · Afiş işleri</p>
+        <p class="soluk" style="margin-top:16px">Okulun Mayıs 2026'da düzenlediği, her yıl tekrarlanabilir bir etkinlik. Afiş, ortaokul öğrencilerini ve velileri okula davet ettiği için aynı zamanda bir tanıtım aracı.</p>
+        <ul class="soluk" style="margin:16px 0 0;padding-left:20px">
+          <li>Tek baskın satır: koridordan geçen biri üç saniyede okur.</li>
+          <li>Alan renkleriyle üç stand; kampanyayla aynı sistem.</li>
+          <li>Tarih, saat, yer, iletişim ve QR tek bilgi bloğunda.</li>
+          <li>Bilinmeyen bilgiler uydurulmadı, köşeli parantezle bırakıldı.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="kap calisma" id="web" aria-labelledby="web-baslik">
+    <div class="calisma-bas">
+      <div><div class="serit" style="background:var(--altin)"></div><h2 id="web-baslik">Veli, ilk ekranda cevabı bulmalı.</h2><p class="ilan">Ana sayfa yeniden tasarımı · Web tasarımı</p></div>
+      <div>
+        <p class="soluk">Burası nasıl bir okul, hangi alanlar var, öğrenci ne kazanıyor, nasıl iletişime geçerim? Ana sayfa bu sorulara ilk kaydırmada cevap verecek şekilde yeniden kuruldu. Aşağıdaki önizleme bir görsel değil, çalışan bir sayfa.</p>
+        <ul>
+          <li>Pandemi başlığı ve tek tek duyurular menüden çıktı; beş net başlık kaldı.</li>
+          <li>Broşür görsellerinin yerini metinle yazılmış alan kartları aldı.</li>
+          <li>Sosyal medya bağlantıları okulun gerçek hesaplarına gidiyor; yalnızca Batman bilgileri var.</li>
+          <li>Telefonda açıldığında ekranın altında sabit “Ara” ve “Bilgi Al” butonları çıkıyor.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="web-duzen">
+      <div class="tarayici">
+        <div class="adres">Ana sayfa konsepti · masaüstü görünümü</div>
+        <div class="olcek" data-w="1440" data-h="900"><div class="ic"><iframe src="basut-anasayfa/" width="1440" height="900" title="Basut ana sayfa konsepti, masaüstü önizleme" loading="lazy" tabindex="-1"></iframe></div></div>
+      </div>
+      <div class="telefon">
+        <div class="olcek" data-w="390" data-h="844"><div class="ic"><iframe src="basut-anasayfa/" width="390" height="844" title="Basut ana sayfa konsepti, mobil önizleme" loading="lazy" tabindex="-1"></iframe></div></div>
+      </div>
+    </div>
+    <div class="web-butonlar">
+      <a class="btn btn-dolu" href="basut-anasayfa/">Çalışan sayfayı aç</a>
+    </div>
+    <p class="not">En iyi deneyim için sayfayı telefonunuzda da açın: menü, sabit arama butonu ve mobil düzen orada görünür. Sayfa HTML, CSS ve JavaScript ile hazırlandı; okulun mevcut WordPress altyapısına da uyarlanabilir.</p>
+  </section>
+</main>
+
+<footer class="kap">
+  <div class="kap" style="padding:0">
+    <div>
+      <h2>Görüşmek isterim.</h2>
+      <p class="soluk">Servet Erdoğan · Bilgisayar Mühendisi</p>
+    </div>
+    <div class="iletisim" style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn" href="tel:+905352736272">0535 273 62 72</a>
+      <a class="btn btn-dolu" href="mailto:eservet224@gmail.com">E-posta gönder</a>
+    </div>
+  </div>
+  <p class="uyari">Bu çalışmalar başvuru amaçlı konsepttir ve okul tarafından yayınlanmamıştır. Fotoğraflar temsilidir. Okulun adı, logosu, adresi ve haber başlıkları okulun kendi yayınlarından alınmıştır.</p>
+</footer>
+
+<script>
+// Her tasarım gerçek boyutunda (ör. 1080×1350) çizilir, sonra kutunun genişliğine göre küçültülür.
+document.querySelectorAll('.olcek').forEach(kutu => {
+  const w = Number(kutu.dataset.w), h = Number(kutu.dataset.h);
+  const ic = kutu.querySelector('.ic');
+  kutu.style.aspectRatio = w + ' / ' + h;   // kutu, tasarımın oranını korur
+  ic.style.width = w + 'px'; ic.style.height = h + 'px';
+  const olcekle = () => { ic.style.transform = 'scale(' + (kutu.clientWidth / w) + ')'; };
+  new ResizeObserver(olcekle).observe(kutu);  // ekran boyutu değişince yeniden hesapla
+  olcekle();
+});
+</script>
+</body>
+</html>

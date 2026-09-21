@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bu sayfa bir konsept çalışmadır; arama motorlarında resmi site gibi görünmesin diye dizine eklenmesini engelliyoruz -->
+<meta name="robots" content="noindex, nofollow">
+<title>Basut Okulları Batman · Ana sayfa konsepti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* ---------- Renk ve yazı sistemi (logodan alınan renkler) ---------- */
+:root{
+  --lacivert:#11104B; --turuncu:#D3702A; --kirmizi:#D63124; --altin:#E0A236;
+  --krem:#FDF5C3; --zemin:#FBF9F2; --zemin-2:#F3EFE2; --cizgi:#E2DDCC;
+  --metin-2:#4A4960; --turuncu-koyu:#A8561C;
+  --baslik:"Sora", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --govde:"Inter", "Helvetica Neue", Arial, sans-serif;
+  --kenar:clamp(20px, 5.5vw, 80px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--zemin);color:var(--lacivert);font-family:var(--govde);font-size:16px;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--turuncu);outline-offset:3px}
+h1,h2,h3{margin:0;font-family:var(--baslik);font-weight:800;letter-spacing:-.02em;line-height:1.08}
+p{margin:0}
+.kap{padding-inline:var(--kenar)}
+.ust-etiket{font-size:15px;font-weight:600;color:var(--turuncu-koyu)}
+.soluk{color:var(--metin-2)}
+
+/* ---------- Butonlar ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:4px;border:1.5px solid transparent;font-weight:600;font-size:16px;text-decoration:none;cursor:pointer;font-family:inherit}
+.btn svg{width:20px;height:20px;flex-shrink:0}
+.btn-turuncu{background:var(--turuncu);color:var(--lacivert)}
+.btn-turuncu:hover{background:#c0621f}
+.btn-lacivert{background:var(--lacivert);color:#fff}
+.btn-lacivert:hover{background:#23226b}
+.btn-cizgi{background:transparent;color:var(--lacivert);border-color:var(--lacivert)}
+.btn-cizgi:hover{background:rgba(17,16,75,.06)}
+.btn-cizgi-acik{background:transparent;color:#fff;border-color:rgba(253,245,195,.6)}
+.btn-cizgi-acik:hover{background:rgba(255,255,255,.08)}
+
+/* ---------- Konsept uyarısı (resmi siteyle karışmasın) ---------- */
+.konsept{background:var(--krem);color:var(--lacivert);font-size:14px;padding:10px var(--kenar);display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+.konsept a{font-weight:600}
+
+/* ---------- Üst bilgi çubuğu ---------- */
+.ust-bar{background:var(--lacivert);color:var(--krem);font-size:14px;min-height:40px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.ust-bar a{color:var(--krem);text-decoration:none}
+.ust-bar .sag{display:flex;gap:24px}
+.ust-bar svg{width:16px;height:16px;vertical-align:-3px;margin-right:6px}
+
+/* ---------- Header ve menü ---------- */
+header.site{position:sticky;top:0;z-index:20;background:var(--zemin);border-bottom:1px solid var(--cizgi);height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo img{height:52px;width:auto}
+nav.ana ul{list-style:none;margin:0;padding:0;display:flex;gap:32px}
+nav.ana a{text-decoration:none;font-weight:500}
+nav.ana a:hover{color:var(--turuncu-koyu)}
+.header-sag{display:flex;align-items:center;gap:8px}
+.ikon-btn{width:44px;height:44px;display:none;align-items:center;justify-content:center;border-radius:4px;border:1px solid var(--cizgi);background:transparent;color:var(--lacivert);cursor:pointer;padding:0}
+.ikon-btn.dolu{background:var(--lacivert);border-color:var(--lacivert);color:#fff}
+.ikon-btn svg{width:22px;height:22px}
+
+/* ---------- Hero ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);min-height:620px}
+.hero-metin{background:var(--lacivert);color:#fff;padding:80px 64px 64px var(--kenar);display:flex;flex-direction:column;justify-content:center;gap:22px}
+.hero-metin .ust-etiket{color:var(--krem)}
+.hero h1{font-size:clamp(40px,5vw,66px);line-height:1.02}
+.hero p{font-size:clamp(16px,1.4vw,20px);max-width:32em}
+.hero .butonlar{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.hero-foto{object-fit:cover;width:100%;height:100%;object-position:55% 50%}
+.uc-renk{display:grid;grid-template-columns:repeat(3,1fr);height:8px}
+.uc-renk span:nth-child(1){background:var(--kirmizi)}.uc-renk span:nth-child(2){background:var(--turuncu)}.uc-renk span:nth-child(3){background:var(--altin)}
+
+/* ---------- Ortak bölüm düzeni ---------- */
+section.bolum{padding-block:clamp(48px,7vw,96px)}
+.bolum-bas{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:40px;flex-wrap:wrap}
+.bolum-bas h2{font-size:clamp(30px,3.2vw,44px);margin-top:10px}
+.bolum-bas p{max-width:30em}
+
+/* ---------- Eğitim alanları ---------- */
+.alanlar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.alan{background:#fff;border:1px solid var(--cizgi);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+.alan img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.alan .serit{height:6px}
+.alan .ic{padding:24px 26px 28px;display:flex;flex-direction:column;gap:10px;flex-grow:1}
+.alan .dal{font-size:14px;font-weight:600;color:var(--metin-2)}
+.alan h3{font-size:28px}
+.alan a{margin-top:auto;padding-top:8px;font-weight:600;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+
+/* ---------- Neden Basut ---------- */
+.neden{background:var(--zemin-2)}
+.neden-izgara{display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.6fr);gap:64px}
+.neden-sol{display:flex;flex-direction:column;gap:16px}
+.neden-sol h2{font-size:clamp(30px,3.2vw,44px)}
+.maddeler{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.madde{background:#fff;border:1px solid var(--cizgi);border-radius:4px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.madde svg{width:32px;height:32px;color:var(--turuncu-koyu)}
+.madde h3{font-family:var(--govde);font-weight:600;font-size:19px;letter-spacing:0}
+
+/* ---------- Haberler ---------- */
+.haberler{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.haber{display:flex;flex-direction:column;gap:14px}
+.haber .tarih{font-size:14px;color:var(--metin-2)}
+.haber h3{font-family:var(--govde);font-weight:600;font-size:18px;line-height:1.4;letter-spacing:0}
+.haber h3 a{text-decoration:none}
+.haber h3 a:hover{text-decoration:underline}
+.yer-tutucu{background:#E7E3D6;border:1.5px dashed #B3AE9F;border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-size:14px;color:#57544B;aspect-ratio:8/5}
+.bas-linkler{display:flex;gap:24px}
+.bas-linkler a{font-weight:600}
+
+/* ---------- Okul yaşamı ---------- */
+.yasam{background:var(--lacivert);color:#fff}
+.yasam .ust-etiket{color:var(--krem)}
+.mozaik{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:16px}
+.mozaik .buyuk{grid-column:span 2;grid-row:span 2}
+.mozaik figure{margin:0;position:relative;border-radius:4px;overflow:hidden}
+.mozaik figure img{width:100%;height:100%;object-fit:cover}
+.mozaik figcaption{position:absolute;left:14px;bottom:14px;background:var(--lacivert);padding:5px 11px;border-radius:4px;font-size:14px;font-weight:600}
+.mozaik .yer-tutucu{aspect-ratio:auto;height:100%;background:#1E1D5E;border-color:rgba(253,245,195,.35);color:var(--krem)}
+.basarilar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
+.basari{display:flex;gap:16px;align-items:center;padding:18px 22px;border:1px solid rgba(253,245,195,.25);border-radius:4px}
+.basari svg{width:28px;height:28px;color:var(--altin);flex-shrink:0}
+.basari small{display:block;color:var(--krem);font-size:14px}
+
+/* ---------- Harekete geçirici bölüm ---------- */
+.cagri{background:var(--krem)}
+.cagri .kap{display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap}
+.cagri h2{font-size:clamp(28px,3.2vw,44px);margin-bottom:12px}
+.cagri .butonlar{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ---------- Footer ---------- */
+footer.site{border-top:1px solid var(--cizgi);padding-top:56px}
+.footer-izgara{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:40px}
+.footer-izgara h4{margin:0 0 12px;font-size:15px}
+.footer-izgara ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.footer-izgara a{color:var(--metin-2);text-decoration:none}
+.footer-izgara a:hover{color:var(--lacivert);text-decoration:underline}
+.sosyal{display:flex;gap:20px;margin-top:14px}
+.sosyal a{color:var(--lacivert);font-weight:600}
+.alt-cizgi{border-top:1px solid var(--cizgi);margin-top:40px;padding-block:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--metin-2)}
+
+/* ---------- Mobil: sabit alt çubuk ---------- */
+.mobil-cubuk{display:none}
+
+/* ================== TABLET ================== */
+@media (max-width: 1080px){
+  nav.ana ul{gap:20px}
+  .haberler{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .neden-izgara{grid-template-columns:1fr;gap:32px}
+  .footer-izgara{grid-template-columns:1fr 1fr}
+}
+/* ================== MOBİL ================== */
+@media (max-width: 860px){
+  .ust-bar{display:none}
+  header.site{height:68px}
+  .logo img{height:40px}
+  .ikon-btn{display:flex}
+  .header-sag .btn{display:none}
+  /* Menü: hamburger ile açılan tam ekran panel */
+  nav.ana{position:fixed;inset:68px 0 0 0;background:var(--zemin);padding:12px var(--kenar) 32px;display:none;flex-direction:column;justify-content:space-between;overflow-y:auto}
+  nav.ana.acik{display:flex}
+  nav.ana ul{flex-direction:column;gap:0}
+  nav.ana ul a{display:flex;min-height:60px;align-items:center;border-bottom:1px solid var(--cizgi);font-family:var(--baslik);font-weight:800;font-size:24px}
+  .menu-alt{display:flex!important}
+  .hero{grid-template-columns:1fr}
+  .hero-foto{order:-1;aspect-ratio:3/2;height:auto}
+  .hero-metin{padding:28px var(--kenar) 36px}
+  .hero .butonlar .btn{width:100%}
+  .alanlar,.maddeler,.basarilar{grid-template-columns:1fr}
+  .haberler{grid-template-columns:1fr}
+  .haber{flex-direction:row;align-items:flex-start}
+  .haber .yer-tutucu{width:96px;flex-shrink:0;aspect-ratio:1}
+  .mozaik{grid-template-columns:1fr 1fr;grid-auto-rows:160px;gap:8px}
+  .mozaik .buyuk{grid-column:span 2;grid-row:span 1}
+  .mozaik .masaustu{display:none}
+  .cagri .butonlar{width:100%;flex-direction:column}
+  .footer-izgara{grid-template-columns:1fr}
+  /* Telefondan gelen veli için her zaman görünen Ara / Bilgi Al çubuğu */
+  .mobil-cubuk{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px var(--kenar) calc(10px + env(safe-area-inset-bottom));background:var(--zemin);border-top:1px solid var(--cizgi)}
+  body{padding-bottom:76px}
+}
+.menu-alt{display:none;flex-direction:column;gap:12px;margin-top:24px}
+/* Menü açıkken alttaki sabit çubuk menüdeki butonların üstüne binmesin */
+body.menu-acik .mobil-cubuk{display:none}
+</style>
+</head>
+<body>
+
+<div class="konsept" role="note">
+  <span>Bu sayfa başvuru amaçlı bir konsept çalışmadır; Basut Okulları'nın resmi web sitesi değildir. Fotoğraflar temsilidir.</span>
+  <a href="../">Portföye dön</a>
+</div>
+
+<div class="ust-bar kap">
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Kültür Mah. 2620 Sok. 206 Evler, Batman</span>
+  <span class="sag">
+    <a href="tel:+904882139861"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5L16 14l4 1.5V19a1.5 1.5 0 0 1-1.5 1.5A15.5 15.5 0 0 1 3.5 5.5 1.5 1.5 0 0 1 5 4z"/></svg>0488 213 98 61</a>
+    <a href="https://www.instagram.com/batmanbasutkoleji/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/ozelbasutkoleji/" target="_blank" rel="noopener">Facebook</a>
+  </span>
+</div>
+
+<header class="site kap">
+  <a class="logo" href="#"><img src="../assets/basut-logo.png" alt="Özel Basut Okulları Batman"></a>
+  <nav class="ana" id="menu" aria-label="Ana menü">
+    <ul>
+      <li><a href="#neden">Okulumuz</a></li>
+      <li><a href="#alanlar">Eğitim Alanları</a></li>
+      <li><a href="#haberler">Haberler</a></li>
+      <li><a href="#haberler">Duyurular</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+    <!-- Sadece mobil menü açıkken görünen iletişim kısmı -->
+    <div class="menu-alt">
+      <span class="soluk">Kültür Mah. 2620 Sok. 206 Evler, Batman</span>
+      <a class="btn btn-turuncu" href="#iletisim">Bilgi Al</a>
+      <a class="btn btn-cizgi" href="tel:+904882139861">Hemen ara</a>
+    </div>
+  </nav>
+  <div class="header-sag">
+    <a class="btn btn-turuncu" href="#iletisim">Bilgi Al</a>
+    <a class="ikon-btn" href="tel:+904882139861" aria-label="Okulu ara"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5L16 14l4 1.5V19a1.5 1.5 0 0 1-1.5 1.5A15.5 15.5 0 0 1 3.5 5.5 1.5 1.5 0 0 1 5 4z"/></svg></a>
+    <button class="ikon-btn dolu" id="menuBtn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menüyü aç">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-baslik">
+    <div class="hero-metin">
+      <div class="ust-etiket">Özel Basut Okulları · Mesleki ve Teknik Anadolu Lisesi</div>
+      <h1 id="hero-baslik">Mesleğin ellerinde başlar.</h1>
+      <p>Sağlık, Elektrik-Elektronik ve Gıda alanlarında teoriyi uygulamayla birlikte öğreten bir meslek lisesi. 1991'den beri Batman'da.</p>
+      <div class="butonlar">
+        <a class="btn btn-turuncu" href="#iletisim">Bilgi Al</a>
+        <a class="btn btn-cizgi-acik" href="#alanlar">Eğitim alanlarını incele</a>
+      </div>
+    </div>
+    <img class="hero-foto" src="../assets/foto-saglik.jpg" alt="Eğitim mankeni üzerinde tansiyon ölçümü uygulaması yapan eller (temsili fotoğraf)">
+  </section>
+  <div class="uc-renk" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <section class="bolum kap" id="alanlar" aria-labelledby="alan-baslik">
+    <div class="bolum-bas">
+      <div><div class="ust-etiket">Eğitim alanları</div><h2 id="alan-baslik">Hangi alanlarda eğitim veriyoruz?</h2></div>
+      <p class="soluk">Mesleki ve Teknik Anadolu Lisesi bünyesinde üç alanda eğitim veriyoruz. Her alanın sayfasında dersler ve kayıt bilgileri yer alır.</p>
+    </div>
+    <div class="alanlar">
+      <article class="alan">
+        <img src="../assets/foto-saglik.jpg" alt="Sağlık alanı uygulaması (temsili fotoğraf)" loading="lazy">
+        <div class="serit" style="background:var(--kirmizi)"></div>
+        <div class="ic"><span class="dal">Hemşire yardımcılığı</span><h3>Sağlık</h3><p class="soluk">Sağlık alanında teoriyi uygulamayla öğrenirsin.</p><a href="#iletisim">Alanı incele</a></div>
+      </article>
+      <article class="alan">
+        <img src="../assets/foto-elektrik.jpg" alt="Breadboard üzerinde devre kuran eller (temsili fotoğraf)" loading="lazy">
+        <div class="serit" style="background:var(--turuncu)"></div>
+        <div class="ic"><span class="dal">Elektrik ve elektronik</span><h3>Elektrik-Elektronik</h3><p class="soluk">Elektrik-Elektronik alanında teoriyi uygulamayla öğrenirsin.</p><a href="#iletisim">Alanı incele</a></div>
+      </article>
+      <article class="alan">
+        <img src="../assets/foto-gida.jpg" alt="Laboratuvarda pipetle numune hazırlayan eller (temsili fotoğraf)" loading="lazy">
+        <div class="serit" style="background:var(--altin)"></div>
+        <div class="ic"><span class="dal">Gıda teknikerliği</span><h3>Gıda</h3><p class="soluk">Gıda alanında üretimi ve kaliteyi uygulayarak öğrenirsin.</p><a href="#iletisim">Alanı incele</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="bolum neden" id="neden" aria-labelledby="neden-baslik">
+    <div class="kap neden-izgara">
+      <div class="neden-sol">
+        <div class="ust-etiket">Neden Basut?</div>
+        <h2 id="neden-baslik">Okulumuzu tanımanız için temel bilgiler</h2>
+        <p class="soluk">Aklınıza takılan her konuda okulumuzu arayabilir veya yerinde ziyaret edebilirsiniz.</p>
+        <div><a class="btn btn-cizgi" href="#iletisim">Okulumuzu ziyaret edin</a></div>
+      </div>
+      <!-- Buradaki dört bilgi okulun kendi web sitesinde yer alan bilgilerdir -->
+      <div class="maddeler">
+        <div class="madde"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>1991'den beri Batman'da</h3><p class="soluk">Okulumuz 1991'den bu yana Batman'da eğitim veriyor.</p></div>
+        <div class="madde"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V6.5a1.5 1.5 0 0 1 3 0V11"/><path d="M10 10V4.5a1.5 1.5 0 0 1 3 0V10"/><path d="M13 10V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M16 11V8.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-2.7L3.5 14.5a1.5 1.5 0 0 1 2.4-1.8L7 14"/></svg><h3>Teori ve uygulama bir arada</h3><p class="soluk">Öğrenciler teorik bilgiyi uygulamayla birlikte öğrenir.</p></div>
+        <div class="madde"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5 13.5 13.5 8.5 15.5 10.5 10.5z"/></svg><h3>Rehberlik desteği</h3><p class="soluk">Rehberlik servisimiz öğrencilerin kendini tanımasına ve sorunlarının üstesinden gelmesine destek olur.</p></div>
+        <div class="madde"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><h3>Hafta sonu kursları</h3><p class="soluk">Ders saatleri dışında hafta sonu kurs programı ve sosyal etkinlikler düzenlenir.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum kap" id="haberler" aria-labelledby="haber-baslik">
+    <div class="bolum-bas">
+      <div><div class="ust-etiket">Okuldan haberler</div><h2 id="haber-baslik">Güncel</h2></div>
+      <div class="bas-linkler"><a href="https://batman.basutokullari.k12.tr/category/bildirimler/duyurular/" target="_blank" rel="noopener">Duyurular</a><a href="https://batman.basutokullari.k12.tr/category/bildirimler/haberler/" target="_blank" rel="noopener">Tüm haberler</a></div>
+    </div>
+    <!-- Haber başlıkları ve tarihleri okulun mevcut sitesinden alınmıştır; bağlantılar orijinal haberlere gider -->
+    <div class="haberler">
+      <article class="haber"><div class="yer-tutucu">Haber görseli</div><div><div class="tarih">26 Haziran 2026</div><h3><a href="https://batman.basutokullari.k12.tr/karne-gunu-sevinc-ve-heyecan-birarada-2/" target="_blank" rel="noopener">Karne günü sevinç ve heyecan bir arada</a></h3></div></article>
+      <article class="haber"><div class="yer-tutucu">Haber görseli</div><div><div class="tarih">19 Haziran 2026</div><h3><a href="https://batman.basutokullari.k12.tr/mezuniyet-gecemiz-2/" target="_blank" rel="noopener">Mezuniyet gecemiz</a></h3></div></article>
+      <article class="haber"><div class="yer-tutucu">Haber görseli</div><div><div class="tarih">15 Mayıs 2026</div><h3><a href="https://batman.basutokullari.k12.tr/bilim-teknik-fuari/" target="_blank" rel="noopener">Bilim Teknik Fuarı</a></h3></div></article>
+      <article class="haber"><div class="yer-tutucu">Haber görseli</div><div><div class="tarih">21 Nisan 2026</div><h3><a href="https://batman.basutokullari.k12.tr/genc-zihinler-yarisiyor-da-ogrencilerimiz-final-e-yukseldi/" target="_blank" rel="noopener">Genç Zihinler Yarışıyor'da öğrencilerimiz finale yükseldi</a></h3></div></article>
+    </div>
+  </section>
+
+  <section class="bolum yasam" aria-labelledby="yasam-baslik">
+    <div class="kap">
+      <div class="bolum-bas">
+        <div><div class="ust-etiket">Okul yaşamı</div><h2 id="yasam-baslik">Laboratuvardan sahneye</h2></div>
+        <p>Uygulama dersleri, fuarlar, törenler ve turnuvalar. Okulumuzda bir yıl nasıl geçiyor, fotoğraflarla görün.</p>
+      </div>
+      <div class="mozaik">
+        <figure class="buyuk"><img src="../assets/foto-elektrik.jpg" alt="Elektrik-Elektronik uygulaması (temsili fotoğraf)" loading="lazy"><figcaption>Elektrik-Elektronik uygulaması</figcaption></figure>
+        <div class="yer-tutucu">Okul fotoğrafı: Bilim Teknik Fuarı</div>
+        <div class="yer-tutucu">Okul fotoğrafı: Mezuniyet gecesi</div>
+        <figure><img src="../assets/foto-gida.jpg" alt="Gıda alanı uygulaması (temsili fotoğraf)" loading="lazy"><figcaption>Gıda alanı</figcaption></figure>
+        <div class="yer-tutucu masaustu">Okul fotoğrafı: Bahar şenliği</div>
+      </div>
+      <div class="basarilar">
+        <div class="basari"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7M10 17h4"/></svg><div><strong>Genç Zihinler Yarışıyor: öğrencilerimiz finale yükseldi</strong><small>Nisan 2026</small></div></div>
+        <div class="basari"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7M10 17h4"/></svg><div><strong>Kick boks: okulumuz şampiyon oldu</strong><small>Nisan 2026</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum cagri" id="iletisim" aria-labelledby="cagri-baslik">
+    <div class="kap">
+      <div>
+        <h2 id="cagri-baslik">Okulumuzu yakından tanıyın.</h2>
+        <p class="soluk">Eğitim alanlarımız ve kayıt süreci hakkında bilgi almak için bize ulaşın ya da okulumuzu ziyaret edin.</p>
+      </div>
+      <div class="butonlar">
+        <a class="btn btn-lacivert" href="tel:+904882139861">Bilgi Al: 0488 213 98 61</a>
+        <a class="btn btn-cizgi" href="https://www.google.com/maps/search/?api=1&amp;query=Basut+Koleji+Batman" target="_blank" rel="noopener">Yol tarifi</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site kap">
+  <div class="footer-izgara">
+    <div>
+      <img src="../assets/basut-logo.png" alt="Özel Basut Okulları Batman" style="height:56px;width:auto">
+      <p class="soluk" style="margin-top:14px">Özel Basut Okulları · Mesleki ve Teknik Anadolu Lisesi, Batman</p>
+      <div class="sosyal"><a href="https://www.instagram.com/batmanbasutkoleji/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/ozelbasutkoleji/" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <div><h4>Okulumuz</h4><ul><li><a href="#neden">Hakkımızda</a></li><li><a href="#neden">Tarihçe</a></li><li><a href="#neden">Öğretmenlerimiz</a></li><li><a href="#neden">Rehberlik</a></li></ul></div>
+    <div><h4>Eğitim alanları</h4><ul><li><a href="#alanlar">Sağlık</a></li><li><a href="#alanlar">Elektrik-Elektronik</a></li><li><a href="#alanlar">Gıda</a></li></ul></div>
+    <div><h4>İletişim</h4><ul><li class="soluk">Kültür Mah. 2620 Sok. 206 Evler, Batman</li><li><a href="tel:+904882139861">0488 213 98 61–63</a></li><li class="soluk">Faks: 0488 213 98 62</li></ul></div>
+  </div>
+  <div class="alt-cizgi"><span>Konsept çalışma · Özel Basut Okulları · Batman</span><span>KVKK Aydınlatma Metni · Çerez Politikası</span></div>
+</footer>
+
+<!-- Mobilde ekranın altına sabitlenen çubuk -->
+<div class="mobil-cubuk">
+  <a class="btn btn-cizgi" href="tel:+904882139861">Ara</a>
+  <a class="btn btn-turuncu" href="#iletisim">Bilgi Al</a>
+</div>
+
+<script>
+// Hamburger menüyü açıp kapatan küçük kod
+const menuBtn = document.getElementById('menuBtn');
+const menu = document.getElementById('menu');
+const acikIkon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+const kapaliIkon = menuBtn.innerHTML;
+
+function menuyuAyarla(acik) {
+  // Menü açılırken header'ı ekranın en üstüne getir; menü paneli header'ın hemen altından başlasın
+  if (acik) window.scrollTo(0, Math.max(window.scrollY, document.querySelector('.konsept').offsetHeight));
+  menu.classList.toggle('acik', acik);            // menüyü göster/gizle
+  document.body.classList.toggle('menu-acik', acik); // alttaki sabit çubuğu gizle
+  menuBtn.setAttribute('aria-expanded', acik);    // ekran okuyucular için durumu bildir
+  menuBtn.setAttribute('aria-label', acik ? 'Menüyü kapat' : 'Menüyü aç');
+  menuBtn.innerHTML = acik ? acikIkon : kapaliIkon; // ikon: çarpı ya da üç çizgi
+  document.body.style.overflow = acik ? 'hidden' : ''; // menü açıkken arka sayfa kaymasın
+}
+menuBtn.addEventListener('click', () => menuyuAyarla(!menu.classList.contains('acik')));
+// Menüdeki bir bağlantıya tıklanınca menü kapanır
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menuyuAyarla(false)));
+// Esc tuşu menüyü kapatır
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('acik')) menuyuAyarla(false); });
+</script>
+</body>
+</html>
